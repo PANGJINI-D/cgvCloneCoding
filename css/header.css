@@ -1,0 +1,218 @@
+*, ul, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* 헤더 상단 광고 영역*/
+.header-top-ad {
+    height: 80px;
+    background-color: black;
+    /* 자식요소 가운데 정렬 */
+    text-align: center;
+    overflow: hidden;
+}
+.header-top-ad a {
+    /* 종료 버튼 위치 선정을 위한 relative position */
+    position: relative;
+    display: inline-block;
+}
+.top-ad-close-btn {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+}
+
+
+/* 헤더1 - 헤더 컨텐츠 영역(로고, 서비서아이콘) */
+.header-contents {
+    height: 112px;
+    background-color: white;
+}
+.header-contents-container {
+    width: 980px;
+    margin: auto;
+    padding: 30px 6px 25px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* cgv로고 */
+.cgv-logo-container {
+    display: flex;
+}
+.cgv-logo-container a {
+    text-decoration-line: none;
+}
+.cgv-logo-container img {
+    width: 117px;
+    height: 53px;
+}
+/* cgv 로고 옆 텍스트 */
+.cgv-logo-container span {
+    height: 53px;
+    color: #222222;
+    letter-spacing: 0.35em;
+    align-content: end;
+}
+
+/* 서비스 아이콘 옆 카드광고 */
+.cgv-service-container {
+    display: flex;
+    list-style-type: none;
+}
+.cgv-service-card-ad {
+    display: flex;
+    align-items: center;
+}
+.cgv-service-card-ad img {
+    width: 136px;
+    height: 39px;
+}
+/* 서비스 아이콘들 */
+.cgv-service-icon {
+    /* border: 1px solid black; */
+    padding-left: 30px;
+}
+.cgv-service-icon a {
+    display: flex;
+    /* 이미지 아래 텍스트가 위치하도록 수직배치 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cgv-service-icon img {
+    width: 36px;
+    height: 36px;
+}
+.cgv-service-icon span {
+    font-size: 13px;
+    color: #666666;
+    letter-spacing: -0.1em;
+}
+
+
+
+/* 헤더2 - 네비게이션바, 서치바 영역 */
+.header-navbar {
+    height: 50px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 2px solid #fb4357;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+    /* 네비게이션바 상단고정 */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-navbar-wrap {
+    width: 992px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* 네비게이션바 */
+.navbar-container {
+    border: 1px solid red;
+    max-width: 992px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-container ul {
+    /* 네비게이션바 가로로 배치 */
+    display: flex;
+    align-items: center;
+}
+.navbar-container li {
+    border: 1px solid blue;
+    position: relative;
+    margin-right: 20px;
+}
+.header-navbar .nav-title a {
+    border: 1px solid orange;
+    font-weight: bolder;
+    font-size: 16px;
+    color: #333;
+    line-height: 50px;
+
+    width: 100px;
+    display: block;
+}
+#nav-title-ticketing a{
+    color: #fb4357;
+}
+/* 서브 메뉴 */
+.nav-contents {
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+
+    border: 1px solid black;
+    padding: 10px 0;
+    /* 서브메뉴 숨기기 */
+    display: none;
+}
+.nav-contents-title a {
+    font-weight: bolder;
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+}
+.nav-contents>a {
+    font-size: 14px;
+    color: #888;
+    line-height: 25px;
+    display: block;
+    border: 1px solid beige;
+}
+.nav-contents a:hover{
+    text-decoration-line: underline;
+}
+/* 서브메뉴 보여주기 */
+.navbar-container:hover .nav-contents{
+    display:block;
+}
+
+/* 서치바 */
+.search-bar-container {
+    width:215px;
+    height: 24px;
+    border-left: 2px solid #999;
+    border-right: 2px solid #999;
+    padding: 0px 0px 0px 12px;
+    display: flex;
+    align-items: center;
+}
+.search-bar-container form {
+    display: flex;
+    align-items: center;
+}
+.search-bar-container input[type="text"] {
+    width: 180px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.search-bar-container button {
+    background: none;
+    border:none;
+    cursor: pointer;
+}
+.search-bar-container button img {
+    width: 26px;
+    height: 26px;
+}
+
+
+
+
+
+
+

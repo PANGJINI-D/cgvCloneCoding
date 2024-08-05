@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <main>
+        <!-- 상단 광고 영역 header-top-ad-->
+        <section class="header-top-ad">
+            <!-- 광고 이미지 -->
+            <a href="#" target="_blank">
+                <img src="./imgs/top_ad.jpg" alt="상단광고 봇치.더.록!"/>
+                <!-- 광고 종료 버튼 -->
+                <a href="" class="top-ad-close-btn">
+                    <img src="./imgs/adCloseBtn.png" alt="광고종료버튼"/>
+                </a>
+            </a>
+        </section>
+        
+        
+        <!-- 헤더 컨텐츠 영역 header-contents -->
+        <section class="header-contents">
+            <!-- ⓐ, ⓑ 모두 한 div로 감싸주고 flex -->
+            <div class="header-contents-container">
+                <!-- ⓐ 로고 + DEEP DIVE SPACE -->
+                <div class="cgv-logo-container">
+                    <a href="">
+                        <img src="imgs/cgvLogo.png" alt="cgv로고"/>
+                    </a>
+                    <span>DEEP DIVE SPACE</span>
+                </div>
+    
+                <!-- ⓑ 광고 + 서비스 아이콘 -->
+                <ul class="cgv-service-container">
+                    <div class="cgv-service-card-ad">
+                        <a>
+                            <img src="imgs/headerAd.png" alt="카드광고"/>
+                        </a>
+                    </div>
+                    <li class="cgv-service-icon">
+                        <a>
+                            <img src="imgs/headerIcon-1.png" alt="로그인"/>
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li class="cgv-service-icon">
+                        <a>
+                            <img src="imgs/headerIcon-2.png" alt="회원가입"/>
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li class="cgv-service-icon">
+                        <a>
+                            <img src="imgs/headerIcon-3.png" alt="MY CGV"/>
+                            <span>MY CGV</span>
+                        </a>
+                    </li>
+                    <li class="cgv-service-icon">
+                        <a>
+                            <img src="imgs/headerIcon-4.png" alt="고객센터"/>
+                            <span>고객센터</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 네비게이션 바 영역 header-nav -->
+        <section class="header-navbar">
+            <div class="header-navbar-wrap">
+                <!-- ⓐ메뉴바 ul 태그로 구현 -->
+                <!-- nav 영역에 마우스 들어오면 아래로 메뉴컨텐츠 펼쳐짐, 각각 요소에 마우스 올라가면 밑줄 생김 -->
+                <!-- ul>    li>     a>영화/극장/예매...  div> a>카테명, 소카테 -->
+                <nav class="navbar-container">
+                    <ul>
+                        <li>
+                            <h2 class="nav-title">
+                                <a href="">영화</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">영화</a>
+                                </h3>
+                                <a href="">무비차트</a>
+                                <a href="">아트하우스</a>
+                                <a href="">ICECON</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="nav-title">
+                                <a href="">극장</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">극장</a>
+                                </h3>
+                                <a href="">CGV 극장</a>
+                                <a href="">특별관</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="nav-title" id="nav-title-ticketing">
+                                <a href="">예매</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">예매</a>
+                                </h3>
+                                <a href="">빠른예매</a>
+                                <a href="">상영스케줄</a>
+                                <a href="">English Ticketing</a>
+                                <a href="">English Schedule</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="nav-title">
+                                <a href="">스토어</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">스토어</a>
+                                </h3>
+                                <a href="">패키지</a>
+                                <a href="">영화관람권</a>
+                                <a href="">기프트카드</a>
+                                <a href="">콤보</a>
+                                <a href="">팝콘</a>
+                                <a href="">음료</a>
+                                <a href="">스낵</a>
+                                <a href="">플레이존</a>
+                                <a href="">씨네샵></a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="nav-title">
+                                <a href="">이벤트</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">이벤트</a>
+                                </h3>
+                                <a href="">SPECIAL</a>
+                                <a href="">영화/예매</a>
+                                <a href="">멤버십/CLUB</a>
+                                <a href="">CGV 극장별</a>
+                                <a href="">제휴할인</a>
+                                <a href="">당첨자 발표</a>
+                                <a href="">종료된 이벤트</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="nav-title">
+                                <a href="">혜택</a>
+                            </h2>
+                            <div class="nav-contents">
+                                <h3 class="nav-contents-title">
+                                    <a href="">혜택</a>
+                                </h3>
+                                <a href="">CGV 할인정보</a>
+                                <a href="">CLUB 서비스</a>
+                                <a href="">VIP 라운지</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <!-- ⓑ서치바 인풋태그2개로 구성 + 돋보기 아이콘 -->
+                <!-- 인풋 박스 선택하면 value=""으로 만들어주기.. 스크립트로 구현 -->
+                <div class="search-bar-container">
+                    <form action="" method="get">
+                        <input type="text" value="10라이브즈"/>
+                        <button type="button">
+                            <img src="./imgs/searchIcon.PNG" alt="검색">
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 메인1️⃣ : 비디오 섹션-->
+        <section class="main--video-section">
+            <div class="main--video-container">
+                <video muted>
+                    <source src="./imgs/bocchi_video.mp4"/>
+
+                </video>
+                <strong>
+                    극장총집편 봇치 더 록! 전편
+                </strong>
+                <span>
+                    결속밴드! CGV에서 다시 결속!
+                    <br>8월 7일 대개봉
+                </span>
+                <div>
+                    <a id="video-detail-btn">상세보기 ></a>
+                    <a class="video-controll-btn" id="video-pause-btn">▶</a>
+                    <a class="video-controll-btn" id="video-mute-btn">🔊</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 메인2️⃣ : 차트 섹션(슬라이드배너) -->
+        <section class="main--chart-section">
+            <div class="main--chart-container">
+                <div class="chart-title-wrap">
+                    <div class="chart-title-tab-wrap">
+                        <h3>
+                            <a href="" id="chart-title-movie">무비차트</a>
+                        </h3>
+                        <h3>
+                            <a href="" id="chart-title-reserve">상영예정작</a>
+                        </h3>
+                    </div>
+                    <a href="" id="movie-all-view">전체보기 ></a>
+                </div>
+                <!-- 탭 전환 및 슬라이드 될 영역 -->
+                <div class="movie-chart-banner">
+                    <!-- 이전 슬라이드 버튼 -->
+                    <div class="arrow-left"> < </div>
+                    <!-- 배너 -->
+                    <div class="banner">
+                        <!-- 슬라이드 1개 -->
+                        <div class="movie-chart-slide-container">
+                            <!-- 영화 1개 -->
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie01_파일럿.jpg" alt="파일럿">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-12">12</b>
+                                    </div>
+                                    <div class="movie-rank">1</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">파일럿</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 92%
+                                    </span>
+                                    <span>
+                                        예매율 22.5%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie02_세븐틴.jpg" alt="세븐틴">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                        <b class="movie-age-day movie-d-day">D-10</b>
+                                    </div>
+                                    <div class="movie-rank">2</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">세븐틴 투어 ‘팔로우’ 어게인 투 시네마</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 16.5%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie03_울버린.jpg" alt="데드풀과울버린">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-19">19</b>
+                                    </div>
+                                    <div class="movie-rank">3</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">데드풀과 울버린</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 82%
+                                    </span>
+                                    <span>
+                                        예매율 8.4%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie04_하츄핑.jpg" alt="하츄핑">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                        <b class="movie-age-day movie-d-day">D-3</b>
+                                    </div>
+                                    <div class="movie-rank">4</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">사랑의 하츄핑</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 7.6%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie05_행복의나라.jpg" alt="행복의나라">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-12">12</b>
+                                        <b class="movie-age-day movie-d-day">D-10</b>
+                                    </div>
+                                    <div class="movie-rank">5</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">행복의 나라</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 7.4%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 슬라이드 2개 -->
+                        <div class="movie-chart-slide-container">
+                            <!-- 영화 1개 -->
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie06_리볼버.jpg" alt="파일럿">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-15">15</b>
+                                        <b class="movie-age-day movie-d-day">D-3</b>
+                                    </div>
+                                    <div class="movie-rank">6</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">리볼버</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 6.7%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie07_빅토리.jpg" alt="빅토리">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-12">12</b>
+                                        <b class="movie-age-day movie-d-day">D-10</b>
+                                    </div>
+                                    <div class="movie-rank">7</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">빅토리</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 6.2%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie08_슈퍼배드4.jpg" alt="슈퍼배드4">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">8</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">슈퍼배드4</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 84%
+                                    </span>
+                                    <span>
+                                        예매율 4.3%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie09_극장총집편봇치.jpg" alt="극장총집편봇치더록">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-12">12</b>
+                                        <b class="movie-age-day movie-d-day">D-3</b>
+                                    </div>
+                                    <div class="movie-rank">9</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">극장총집편 봇치 더 록! 전편</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 2.6%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie10_10라이브즈.jpg" alt="10라이브즈">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                        <b class="movie-age-day movie-d-day">D-11</b>
+                                    </div>
+                                    <div class="movie-rank">10</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">10 라이브즈</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 2.2%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 슬라이드 3개 -->
+                        <div class="movie-chart-slide-container">
+                            <!-- 영화 1개 -->
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie11_블랙핑크.jpg" alt="블랙핑크월드투어">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">11</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">블랙핑크 월드투어 [본 핑크] 인 시네마</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 96%
+                                    </span>
+                                    <span>
+                                        예매율 3.0%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie12_인사이드아웃2.jpg" alt="인사이드아웃2">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">12</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">인사이드 아웃 2</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 97%
+                                    </span>
+                                    <span>
+                                        예매율 1.3%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie13_코난.jpg" alt="명탐정코난">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">13</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">명탐정코난-100만 달러의 펜타그램</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 84%
+                                    </span>
+                                    <span>
+                                        예매율 1.0%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie14_깊이빠져.jpg" alt="깊이 빠져 보다: 알버트">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">14</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">깊이 빠져 보다: 알버트</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> ?
+                                    </span>
+                                    <span>
+                                        예매율 1.0%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie15_도라에몽재밌겠다.jpg" alt="극장판 도라에몽-진구의 지구 교향곡">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">15</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">극장판 도라에몽-진구의 지구 교향곡</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 92%
+                                    </span>
+                                    <span>
+                                        예매율 1.0%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 슬라이드 2개 -->
+                        <div class="movie-chart-slide-container">
+                            <!-- 영화 1개 -->
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie16_탈주봐야되는데.jpg" alt="탈주">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-12">12</b>
+                                    </div>
+                                    <div class="movie-rank">16</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">탈주</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 93%
+                                    </span>
+                                    <span>
+                                        예매율 1.0%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie17_헬로카봇.jpg" alt="헬로카봇 올스타 스페셜">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">7</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">헬로카봇 올스타 스페셜</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 80%
+                                    </span>
+                                    <span>
+                                        예매율 0.9%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie18_이준호.jpg" alt="이준호 콘서트 : 다시 만나는 날">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                    </div>
+                                    <div class="movie-rank">18</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">이준호 콘서트 : 다시 만나는 날</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-great.png"/> 96%
+                                    </span>
+                                    <span>
+                                        예매율 0.8%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie19_온앤오프.jpg" alt="[마이 아티 필름] 온앤오프 : 뷰티풀 뷰티풀">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-all">ALL</b>
+                                        <b class="movie-age-day movie-d-day">D-3</b>
+                                    </div>
+                                    <div class="movie-rank">19</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">[마이 아티 필름] 온앤오프 : 뷰티풀 뷰티풀</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 0.7%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="movie-container">
+                                <div class="movie-img-wrap">
+                                    <img src="imgs/movie20_이오어쩌고.jpg" alt="이오 카피타노">
+                                    <div class="movie-age-limit-wrap">
+                                        <b class="movie-age-day movie-age-15">15</b>
+                                        <b class="movie-age-day movie-d-day">D-3</b>
+                                    </div>
+                                    <div class="movie-rank">20</div>
+                                    <div class="movie-img-overlay"></div>
+                                    <div class="movie-chart-btn-wrap">
+                                        <a href="" class="movie-chart-btn-detail">상세보기</a>
+                                        <a href="" class="movie-chart-btn-ticketing">예매하기</a>
+                                    </div>
+                                </div>
+                                <div class="movie-info-wrap">
+                                    <strong class="movie-name">이오 카피타노</strong>
+                                    <span>
+                                        <img src="imgs/movie_goldenegg-pree.png"/> 99%
+                                    </span>
+                                    <span>
+                                        예매율 0.5%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 다음 슬라이드 버튼 -->
+                    <div class="arrow-right"> > </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 메인3️⃣ : 이벤트 섹션 -->
+        <section class="main--event-section">
+            <div class="main--event-container">
+                <div class="event-title-wrap">
+                    <h3 class="title-h3">EVENT</h3>
+                    <div class="title-btn-wrap">
+                        <a href="" class="btn-play">▷</a>
+                        <a href="" class="btn-view-all">전체보기 ></a>
+                    </div>
+                </div>
+                <div class="event-list-wrap">
+                    <div class="event-item">
+                        <div class="event-img">
+                            <img src="imgs/event1.jpg">
+                        </div>
+                        <strong>깊이 빠져 보다, CGV</strong>
+                        <span>2024.07.22~2024.08.30</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-img">
+                            <img src="imgs/event2.jpg">
+                        </div>
+                        <strong><깊이 빠져 보다: ALBERT></strong>
+                        <span>2024.07.22~2024.08.31</span>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-img">
+                            <img src="imgs/event3.jpg">
+                        </div>
+                        <strong>서프라이즈 only[도라에몽] 무료 관람</strong>
+                        <span>2024.07.21~2024.08.06</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 메인4️⃣ : 특별관 섹션 -->
+        <section class="main--special-hall-section">
+            <div class="main--special-hall-container">
+                <!-- 타이틀 -->
+                <div class="special-hall-title-wrap">
+                    <h3 class="title-h3">특별관</h3>
+                    <a href="" class="btn-view-all">전체보기 ></a>
+                </div>
+                <!-- 컨텐츠 -->
+                <div class="special-hall-list-wrap">
+                    <div class="special-hall-img-wrap">
+                        <img src="imgs/special1.png" alt="특별관 이미지">
+                    </div>
+                    <div>
+                        <ul class="special-hall-list-ul">
+                            <li class="special-hall-list">
+                                <strong>SUITE CINEMA</strong>
+                                <span>#호텔 컨셉의 프리미엄관</span>
+                            </li>
+                            <li class="special-hall-list">
+                                <strong>CINE & LIVINGROOM</strong>
+                                <span>#신개념 소셜 상영관</span>
+                            </li>
+                            <li class="special-hall-list">
+                                <strong>4DX</strong>
+                                <span>#모션시트 #오감체험</span>
+                            </li>
+                            <li class="special-hall-list">
+                                <strong>CINE de CHEF</strong>
+                                <span>#쉐프가 있는 영화관</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 메인5️⃣ : 기프티콘 섹션 -->
+        <section class="main--giftcon-section">
+            <div class="main--giftcon-container">
+                <!-- 패키지 -->
+                <div class="giftcon-wrap">
+                    <ul>
+                        <li class="giftcon-title-wrap">
+                            <h3>패키지</h3>
+                            <a>더보기</a>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/pack1.jpg" alt="극장총집편얼리버드">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span><극장총집편 봇치 더 록! 전편>얼리버드 관람권</span>
+                                <strong>18,000원</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/pack2.jpg" alt="우리 패키지">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>우리 패키지</span>
+                                <strong>62,000원</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/pack3.jpg" alt="나랑 너 패키지">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>나랑 너 패키지</span>
+                                <strong>35,000원</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 영화관람권 -->
+                <div class="giftcon-wrap">
+                    <ul>
+                        <li class="giftcon-title-wrap">
+                            <h3>영화관람권</h3>
+                            <a>더보기</a>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/ticket01.jpg" alt="CGV 영화관람권">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>CGV 영화관람권</span>
+                                <strong>13,000원</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/ticket02.jpg" alt="IMAX 영화관람권">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>IMAX 영화관람권</span>
+                                <strong>18,000원</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/ticket03.jpg" alt="4DX 영화관람권">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>4DX 영화관람권</span>
+                                <strong>19,000원</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 기프트카드 -->
+                <div class="giftcon-wrap">
+                    <ul>
+                        <li class="giftcon-title-wrap">
+                            <h3>기프트카드</h3>
+                            <a>더보기</a>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/gift01.jpg" alt="PACONNIE A형">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>PACONNIE A형</span>
+                                <strong>금액충전형</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/gift02.jpg" alt="PACONNIE B형">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>PACONNIE B형</span>
+                                <strong>금액충전형</strong>
+                            </div>
+                        </li>
+                        <li class="giftcon-list">
+                            <div>
+                                <img src="imgs/gift03.jpg" alt="PACONNIE C형">
+                            </div>
+                            <div class="giftcon-info-wrap">
+                                <span>PACONNIE C형</span>
+                                <strong>금액충전형</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 메인6️⃣ : 공지 섹션 -->
+        <section class="main--notice-section">
+            <div class="main--notice-container">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 비디오 재생 스크립트 -->
+    <script src="../js/video.js"></script>
+    <!-- 슬라이드 배너 스크립트 -->
+    <script src="../js/banner.js"></script>
+</body>
+
+
+
+
+
+
+
+</html>

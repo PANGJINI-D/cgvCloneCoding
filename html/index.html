@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- 네비바 헤더에 삽입하면 고정이 안됨..  -->
+    <main id="main">
+    </main>
+    
+
+
+    <footer id="footer"></footer>
+    <!-- header, footer 파일을 로딩하기 위한 ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#main").load("main.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

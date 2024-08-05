@@ -1,0 +1,573 @@
+/* 1️⃣ - 비디오 섹션 */
+.main--video-section {
+    height: 498px;
+    background-color: black;
+    overflow: hidden;
+}
+.main--video-container {
+    background-color: aqua;
+    width: 980px;
+    /* 동영상 가운데정렬 */
+    margin: 0 auto;
+    position: relative;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+.main--video-container video {
+    width: 100%;
+    height: 498px;
+    /* 비율 유지하면서 화면 채우기 */
+    object-fit: cover;
+    z-index: 1;
+}
+/* 비디오 오버레이 */
+.main--video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 그라데이션 되도록 오버레이 linear-gradient */
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    z-index: 1;
+}
+/* 동영상 위 텍스트, 버튼 */
+.main--video-container strong,
+.main--video-container span,
+.main--video-container div {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.main--video-container strong {
+    top: 36%;
+    left: 2%;
+    font-size: 40px;
+    font-weight: bold;
+}
+.main--video-container span {
+    top: 48%;
+    left: 2%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.main--video-container div {
+    top: 60%;
+    left: 2%;
+}
+#video-detail-btn {
+    display: inline-block;
+    width: 98px;
+    height: 30px;
+    background-color: #ffffffcc;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #343434;
+    text-shadow: none;
+    text-align: center;
+    line-height: 30px;
+}
+.video-controll-btn {
+    display: inline-block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ffffffcc;
+    border-radius: 25px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+
+/* 2️⃣ : 차트 섹션 */
+.main--chart-section {
+    height: 460px;
+    background-color: #f9f9f9;
+}
+.main--chart-container{
+    position: relative;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+}
+/* 탭 영역 */
+.chart-title-wrap {
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.chart-title-tab-wrap {
+    display: flex;
+}
+#chart-title-movie {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+}
+#chart-title-reserve {
+    font-size: 26px;
+    font-weight: 350;
+    color: #666;
+    margin-left: 20px;
+}
+#movie-all-view {
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    color: #222;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 슬라이드배너 */
+.movie-chart-banner {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* 배너 화살표 */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+    line-height: 38px;
+    text-align: center;
+    color: #444;
+    z-index: 5;
+    cursor: pointer;
+
+}
+.arrow-left {
+    left: -20px;
+}
+.arrow-right{
+    right: -20px;
+}
+
+/* 차트 영역 */
+.banner {
+    display: flex;
+    /* 슬라이드 배너 전체의 길이 */
+    width: 4000px;
+
+}
+.movie-chart-slide-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.movie-container{
+    position: relative;
+    width: 170px;
+    height: 295px;
+}
+/* 영화 이미지 */
+.movie-img-wrap {
+    width: 100%;
+    height: 235px;
+}
+.movie-img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8%;
+}
+/* 마우스 올렸을 때 처리 */
+.movie-img-wrap:hover .movie-img-overlay {
+    background: none;
+    background-color: #34343488;
+}
+.movie-img-wrap:hover .movie-age-day,
+.movie-img-wrap:hover .movie-rank{
+    display: none;
+}
+.movie-img-wrap:hover .movie-chart-btn-detail,
+.movie-img-wrap:hover .movie-chart-btn-ticketing {
+    display: block;
+}
+/* 영화랭킹 */
+.movie-rank {
+    position: absolute;
+    top: 62%;
+    left: 5%;
+    color: #fff;
+    font-size: 50px;
+    font-style: italic;
+    z-index: 2;
+}
+/* 영화 이미지 오버레이 */
+.movie-img-overlay {
+    width: 100%;
+    height: 235px;
+    
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    border-radius: 8%;
+}
+/* 영상관람가제한, 개봉일Dday */
+.movie-age-limit-wrap {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    z-index: 4;
+}
+.movie-age-all,
+.movie-age-12,
+.movie-age-15,
+.movie-age-19,
+.movie-d-day {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    letter-spacing: -2px;
+    overflow: hidden;
+}
+.movie-age-all {
+    background-color: #049217;
+    font-size: 14px;
+}
+.movie-age-12 {
+    background-color: #f8c200;
+}
+.movie-age-15 {
+    background-color: #f88d00;
+}
+.movie-age-19 {
+    background-color: #da2e42;
+}
+.movie-d-day {
+    background-color: #fff;
+    color: #da2e42;
+    font-size: 11px;
+    margin-top: 5px;
+}
+/* 예매하기, 상세보기 버튼 */
+.movie-chart-btn-wrap a {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    left: 25px;
+    width: 120px;
+    height: 36px;
+    border-radius: 7px;
+    text-align: center;
+    align-content: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+.movie-chart-btn-detail {
+    top: 28%;
+    background-color: #fff;
+    color: #444;
+}
+.movie-chart-btn-detail:hover {
+    background-color: #fffc;
+}
+.movie-chart-btn-ticketing {
+    top: 42%;
+    background-color: #fb4357;
+    color: white;
+}
+.movie-chart-btn-ticketing:hover {
+    background-color: #fb4357cc;
+}
+
+/* 영화 상세정보 */
+.movie-info-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.movie-name {
+    display: inline-block;
+    width: 170px;
+    margin-top: 12px;
+    /* 텍스트를 한 줄로 표시 */
+    white-space: nowrap; 
+    overflow: hidden;
+    /* 넘치는 부분을 ...으로 표시 */
+    text-overflow: ellipsis; 
+    max-width: 98%;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+.movie-info-wrap span {
+    font-size: 13px;
+    color: #444;
+    font-weight: 550;
+    margin-top: 4px;
+}
+span:nth-of-type(2) {
+    margin-left: 20px;
+}
+.movie-info-wrap span img {
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* 3️⃣ - 이벤트섹션 */
+.main--event-section {
+    height: 394px;
+    background-color: #fff;
+    /* margin: 0 auto; */
+}
+.main--event-container {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+}
+/* 타이틀 영역 */
+.event-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.title-h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+}
+.title-btn-wrap {
+    display: flex;
+}
+.btn-play {
+    display: inline-block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #e2e2e2;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.btn-view-all {
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    color: #222;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e2e2e2;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+/* 이벤트 콘텐츠 영역 */
+.event-list-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.event-item {
+    width: 310px;
+    height: 273px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.event-img {
+    width: 100%;
+    height: 207px;
+    border-radius: 6%;
+    overflow: hidden;
+}
+.event-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6%;
+}
+/* 이미지 영역에 마우스 올렸을 때 처리 */
+.event-img img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+.event-item strong {
+    display: block;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+.event-item span {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* 4️⃣ - 특별관 */
+.main--special-hall-section {
+    width: 100%;
+    background-color: white;
+}
+.main--special-hall-container {
+    width: 980px;
+    height: 100%;
+    align-content: center;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.special-hall-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.special-hall-list-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+/* 이미지 */
+.special-hall-img-wrap {
+    width: 500px;
+    height: 262px;
+    cursor: pointer;
+}
+.special-hall-img-wrap img {
+    width: 100%;
+    height: 100%;
+}
+/* 리스트 */
+.special-hall-list-ul {
+    border-bottom: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+.special-hall-list {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    height: 24px;
+    padding: 19px 25px 19px 19px;
+    border-top: 1px solid #e2e2e2;
+}
+.special-hall-list strong {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+.special-hall-list span {
+    font-size: 13px;
+    color: #666;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    padding: 2px 7px;
+}
+
+
+/* 5️⃣ - 기프티콘 */
+.main--giftcon-section {
+    height: 375px;
+    padding-top: 60px;
+}
+.main--giftcon-container {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.giftcon-wrap {
+    width: 270px;
+    height: 324px;
+    padding: 20px 19px 30px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+}
+/* 타이틀 */
+.giftcon-title-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.giftcon-title-wrap h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    line-height: 28px;
+}
+.giftcon-title-wrap a {
+    padding: 2px 15px 3px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid #f4f4f4;
+    border-radius: 11px;
+    align-content: center;
+}
+/* 기프티콘 리스트 */
+.giftcon-list {
+    width: 100%;
+    height: 76px;
+    margin-top: 27px;
+    display: flex;
+}
+.giftcon-list div img {
+    width: 75px;
+    height: 76px;
+    margin-right: 15px;
+}
+.giftcon-info-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.giftcon-info-wrap span {
+    font-size: 14px;
+    color: #222;
+    font-weight: 500;
+}
+.giftcon-info-wrap strong {
+    font-size: 16px;
+    color: #222;
+}
+
+
+/* 6️⃣ - 공지 섹션 */
+.main--notice-section {
+    width: 100%;
+    height: 238px;
+    padding: 30px 0 120px;
+}
+.main--notice-container {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #049217;
+}
+
+
+
