@@ -25,6 +25,10 @@
 .header--navbar-section.fixed .nav-title a {
     color: white;
 }
+.header--navbar-section.fixed .search-bar-container input {
+    background-color: transparent;
+    color: white;
+}
 
 /* 로고, 드롭다운, 서치바 감싸는 컨테이너*/
 .header--navbar-wrap {
@@ -115,8 +119,8 @@
 .search-bar-container {
     width:215px;
     height: 24px;
-    border-left: 2px solid #999;
-    border-right: 2px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
     padding: 0px 0px 0px 12px;
     display: flex;
     align-items: center;

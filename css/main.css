@@ -678,3 +678,66 @@ span:nth-of-type(2) {
     height: 100%;
     border-radius: 10px;
 }
+
+
+/* 7️⃣ - 예매하기 버튼 */
+.main--fixed-btn-container {
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+    right: 0px;
+    margin-right: 120px;
+    z-index: 7;
+}
+/* 나타날 때의 스타일 */
+.main--fixed-btn-container.show .fixed-btn-ticketing {
+    opacity: 1;
+    right: 65px;
+}
+.main--fixed-btn-container.show .fixed-btn-go-top {
+    opacity: 1;
+}
+
+/* 사라질 때 스타일 */
+/* 트랜지션 삭제할 경우 다시 스크롤 할 때 애니메이션 적용 안되기 때문에 투명도로 조절 */
+ㅌ.main--fixed-btn-container.hide {
+    opacity: 0;
+}
+
+
+.fixed-btn-ticketing {
+    width: 136px;
+    padding: 12px 0 14px;
+    background: linear-gradient(to right, #da2e42,#da2e42, orange);
+    border-radius: 25px;
+    box-shadow: 1px 3px 6px 0 #fff7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    /* 버튼의 시작 위치를 top버튼과 겹치게 하기 위해 position 변경 */
+    position: absolute;
+    /* 버튼이 오른쪽에서 왼쪽으로 서서히 나타나게 하기 위해 투명도 조절 */
+    right: 0px;
+    opacity: 0;
+    transition: right 0.3s, opacity 0.3s;
+}
+.fixed-btn-go-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 1px 3px 6px 0 #fff7;
+    border-radius: 50px;
+    margin-left: 20px;
+    /* 버튼이 서서히 나타나게 하기 위해 투명도 조절 */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.fixed-btn-go-top img {
+    width: 15px;
+    height: 21px;
+}

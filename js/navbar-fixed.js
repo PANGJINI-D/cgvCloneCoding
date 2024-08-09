@@ -11,6 +11,7 @@ const navbar = document.querySelector(".header--navbar-section");
 const navbarTopY = navbar.offsetTop; 
 // console.log("navbarTopY : "+navbarTopY); 
 // console.log(navbar);
+const fixedBtn = document.querySelector(".main--fixed-btn-container");
 
 window.addEventListener("scroll", (e) => {
     // console.log("윈도우 스크롤 좌표 : " + window.pageYOffset);
@@ -22,9 +23,15 @@ window.addEventListener("scroll", (e) => {
         // <section class="header--navbar-section fixed">로 변경되어 
         // .fixed클래스의 css 속성이 적용된다.
         navbar.classList.add("fixed");
+        fixedBtn.classList.remove("hide");  // hide 클래스 제거
+        fixedBtn.classList.add("show");
     } else {
         // 네비게이션 섹션에 fixed 클래스 제거
         // 다시 원래대로 <section class="header--navbar-section">이 됨
         navbar.classList.remove("fixed");
+        fixedBtn.classList.remove("show");
+        
+        // 애니메이션 없이 버튼을 바로 숨기기 위해 hide 클래스 추가
+        fixedBtn.classList.add("hide");
     }
-});
+}); 
