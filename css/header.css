@@ -1,10 +1,9 @@
-*, ul, a {
+*, ul, a{
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; 
     text-decoration: none;
 }
-
 /* 헤더 상단 광고 영역*/
 .header-top-ad {
     height: 80px;

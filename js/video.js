@@ -64,7 +64,7 @@ const initializeVideo = () => {
             }
         });
     } else {
-        console.error("Video controls not found or failed to initialize.");
+        console.error("비디오 재생 오류");
     }
 }
 

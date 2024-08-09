@@ -10,7 +10,7 @@
 // 태그 가져오기
 const img = document.querySelector(".special-hall-img-wrap img");
 const hallList = document.querySelectorAll(".special-hall-list");
-console.log(hallList);
+// console.log(hallList);
 
 // list 태그 초기 border 설정
 with(hallList[0].style) {

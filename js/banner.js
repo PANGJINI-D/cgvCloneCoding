@@ -1,13 +1,13 @@
 // 화살표
 const arrows = document.querySelectorAll(".arrow-left, .arrow-right");
 // 슬라이드
-const slides = document.querySelectorAll('.movie-chart-slide-container');
+const slides = document.querySelectorAll(".movie-chart-slide-container");
 const slideLen = slides.length;
 let curSlide = 0;
 
 // 화살표 클릭이벤트
 arrows.forEach((arrow) => {
-    arrow.addEventListener('click', (e) => {
+    arrow.addEventListener("click", (e) => {
         // 현재 슬라이드 인덱스 계산하기
         if (e.target.classList.contains("arrow-left")) {        // 왼쪽 화살표 클릭시 curSlide값
             curSlide = Math.max(curSlide - 1, 0);               // 현재 슬라이드 -1, 최소값 0으로 제한

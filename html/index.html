@@ -16,7 +16,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
-            $("#header").load("header.html");
+            $("#header").load("header.html", () => {
+                $.getScript("../js/navbar-fixed.js");
+            });
             $("#main").load("main.html", function() {
                 // 로드된 콘텐츠의 스크립트 실행
                 $.getScript("../js/video.js");
